@@ -1,0 +1,59 @@
+.headers {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  overflow: hidden;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  width: 65%;
+  display: flex;
+  margin: auto;
+}
+
+li {
+  float: left;
+  width: 100%;
+}
+
+li a {
+  display: block;
+  color: gray;
+  text-align: center;
+  padding: 14px 40px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+li a:hover {
+  background-color: whitesmokelue;
+}
+
+.tableCustomCss {
+  background-color: whitesmoke;
+  opacity: 0.9;
+}
+
+.tableDiv {
+  border-radius: 6px;
+  margin: 30px;
+}
+
+.active {
+  color: blue !important;
+  text-decoration: underline !important;
+}
+
+.table-img {
+  width: 20px;
+  height: 20px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}

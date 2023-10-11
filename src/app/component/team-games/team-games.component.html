@@ -1,0 +1,21 @@
+<div style="margin:100px 20px 20px 20px">
+    <table class="table tableCustomCss">
+      <tbody>
+        <tr *ngFor="let col of tableData">
+          <td><img class="table-img" src="{{ col.logoHome }}" /></td>
+          <td>{{ col.nameHome }}</td>
+          <td>{{ col.scoreHome }}</td>
+          <td>-</td>
+          <td>{{ col.scoreAway }}</td>
+          <td>{{ col.nameAway }}</td>
+          <td><img class="table-img" src="{{ col.logoAway }}" /></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="Footer">
+    <button class="btn btn-primary buttonMargin" (click)="onBackClick()">
+      Back
+    </button>
+  </div>
+  

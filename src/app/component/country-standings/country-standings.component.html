@@ -1,0 +1,49 @@
+<div>
+    <div class="headers">FOOTBALL UPDATES</div>
+    <div class="header-container">
+      <ul>
+        <li *ngFor="let country of countries">
+          <a
+            [ngClass]="{
+              active: country.name === footballService.selectedCountry.name
+            }"
+            id="{{ country.name + 'Select' }}"
+            (click)="onCountryClick(country)"
+            >{{ country.name }}</a
+          >
+        </li>
+      </ul>
+    </div>
+    <div class="tableDiv">
+      <table class="table table-bordered tableCustomCss">
+        <thead>
+          <tr>
+            <th *ngFor="let col of tableCols">{{ col }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngIf="tableData.length == 0; else tabled">
+            <td style="text-align:center" colspan="9">No data to display</td>
+          </tr>
+        </tbody>
+      </table>
+      <ng-template #tabled>
+        <tr *ngFor="let col of tableData">
+          <td>{{ col.seq }}</td>
+          <td><img class="table-img" src="{{ col.logo }}" /></td>
+          <td>
+            <span class="cursor-pointer" (click)="goToTeams(col)">{{
+              col.name
+            }}</span>
+          </td>
+          <td>{{ col.games }}</td>
+          <td>{{ col.win }}</td>
+          <td>{{ col.lose }}</td>
+          <td>{{ col.draw }}</td>
+          <td>{{ col.goalDiff }}</td>
+          <td>{{ col.points }}</td>
+        </tr>
+      </ng-template>
+    </div>
+  </div>
+  
